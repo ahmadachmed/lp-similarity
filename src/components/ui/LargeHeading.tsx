@@ -18,12 +18,12 @@ const headingVariants = cva(
   }
 );
 
-interface ParagraphProps
+interface LargeHeadingProps
   extends HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof headingVariants> {}
 
 // eslint-disable-next-line react/display-name
-const Paragraph = forwardRef<HTMLHeadingElement, ParagraphProps>(
+const LargeHeading = forwardRef<HTMLHeadingElement, LargeHeadingProps>(
   ({ className, size, children, ...props }, ref) => {
     return (
       <h1
@@ -42,6 +42,6 @@ const Paragraph = forwardRef<HTMLHeadingElement, ParagraphProps>(
   }
 );
 
-Paragraph.displayName = 'Paragraph'
+LargeHeading.displayName = 'LargeHeading'
 
-export default Paragraph;
+export default LargeHeading;
